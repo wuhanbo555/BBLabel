@@ -1,9 +1,9 @@
 //
-//  BBLabel.m
-//  TBReader
+//  BBLabel.h
 //
-//  Created by 吴瀚波 on 14/11/24.
+//  Created by Boby on 14/11/24.
 //
+//  Version 1.0
 
 #import "BBLabel.h"
 #import <CoreText/CoreText.h>

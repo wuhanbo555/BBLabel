@@ -2,7 +2,7 @@
 //  BBLabelDemoTests.m
 //  BBLabelDemoTests
 //
-//  Created by 吴瀚波 on 14/11/25.
+//  Created by Boby on 14/11/25.
 
 //
 
