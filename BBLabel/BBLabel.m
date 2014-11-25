@@ -188,7 +188,7 @@
 }
 
 //计算高度
-- (float)wordsDrawInViewHeightWithWidth:(int)width
+- (float)wordsDrawInViewHeightWithWidth:(float)width
 {
     if (![self.oldStr isEqualToString:self.text] || self.linesSpace != self.oldLinesSpace)
     {

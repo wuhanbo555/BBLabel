@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>221B9E74-A7AE-4B05-9D93-51D4EF4C2C6E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BBLabelDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D5053FB7D9EA46DBFB9ACE2AFA36943F91BE0C4D</key>
+		<string>https://github.com/wuhanbo555/BBLabel.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BBLabelDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D5053FB7D9EA46DBFB9ACE2AFA36943F91BE0C4D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wuhanbo555/BBLabel.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D5053FB7D9EA46DBFB9ACE2AFA36943F91BE0C4D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D5053FB7D9EA46DBFB9ACE2AFA36943F91BE0C4D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BBLabel</string>
+		</dict>
+	</array>
+</dict>
+</plist>

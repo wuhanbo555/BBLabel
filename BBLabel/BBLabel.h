@@ -14,6 +14,6 @@
 
 
 //绘制前先获取label高度，避免重复计算
-- (float)wordsDrawInViewHeightWithWidth:(int)width;
+- (float)wordsDrawInViewHeightWithWidth:(float)width;
 
 @end
