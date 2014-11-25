@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9C640801A24B4DC00C7E997 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C6407F1A24B4DC00C7E997 /* Foundation.framework */; };
+		D9C640821A24B4DC00C7E997 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C640811A24B4DC00C7E997 /* CoreGraphics.framework */; };
+		D9C640841A24B4DC00C7E997 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C640831A24B4DC00C7E997 /* UIKit.framework */; };
+		D9C6408A1A24B4DC00C7E997 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9C640881A24B4DC00C7E997 /* InfoPlist.strings */; };
+		D9C6408C1A24B4DC00C7E997 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C6408B1A24B4DC00C7E997 /* main.m */; };
+		D9C640901A24B4DC00C7E997 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C6408F1A24B4DC00C7E997 /* AppDelegate.m */; };
+		D9C640931A24B4DC00C7E997 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C640911A24B4DC00C7E997 /* Main_iPhone.storyboard */; };
+		D9C640961A24B4DC00C7E997 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9C640941A24B4DC00C7E997 /* Main_iPad.storyboard */; };
+		D9C640991A24B4DD00C7E997 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C640981A24B4DD00C7E997 /* ViewController.m */; };
+		D9C6409B1A24B4DD00C7E997 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9C6409A1A24B4DD00C7E997 /* Images.xcassets */; };
+		D9C640A21A24B4DD00C7E997 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C640A11A24B4DD00C7E997 /* XCTest.framework */; };
+		D9C640A31A24B4DD00C7E997 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C6407F1A24B4DC00C7E997 /* Foundation.framework */; };
+		D9C640A41A24B4DD00C7E997 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C640831A24B4DC00C7E997 /* UIKit.framework */; };
+		D9C640AC1A24B4DD00C7E997 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D9C640AA1A24B4DD00C7E997 /* InfoPlist.strings */; };
+		D9C640AE1A24B4DD00C7E997 /* BBLabelDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C640AD1A24B4DD00C7E997 /* BBLabelDemoTests.m */; };
+		D9C640BA1A24B50F00C7E997 /* BBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D9C640B91A24B50F00C7E997 /* BBLabel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9C640A51A24B4DD00C7E997 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9C640741A24B4DC00C7E997 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9C6407B1A24B4DC00C7E997;
+			remoteInfo = BBLabelDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D9C6407C1A24B4DC00C7E997 /* BBLabelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBLabelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C6407F1A24B4DC00C7E997 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D9C640811A24B4DC00C7E997 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D9C640831A24B4DC00C7E997 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D9C640871A24B4DC00C7E997 /* BBLabelDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BBLabelDemo-Info.plist"; sourceTree = "<group>"; };
+		D9C640891A24B4DC00C7E997 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D9C6408B1A24B4DC00C7E997 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D9C6408D1A24B4DC00C7E997 /* BBLabelDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBLabelDemo-Prefix.pch"; sourceTree = "<group>"; };
+		D9C6408E1A24B4DC00C7E997 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D9C6408F1A24B4DC00C7E997 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D9C640921A24B4DC00C7E997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		D9C640951A24B4DC00C7E997 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		D9C640971A24B4DD00C7E997 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D9C640981A24B4DD00C7E997 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D9C6409A1A24B4DD00C7E997 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D9C640A01A24B4DD00C7E997 /* BBLabelDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBLabelDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9C640A11A24B4DD00C7E997 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D9C640A91A24B4DD00C7E997 /* BBLabelDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BBLabelDemoTests-Info.plist"; sourceTree = "<group>"; };
+		D9C640AB1A24B4DD00C7E997 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D9C640AD1A24B4DD00C7E997 /* BBLabelDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLabelDemoTests.m; sourceTree = "<group>"; };
+		D9C640B81A24B50F00C7E997 /* BBLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBLabel.h; sourceTree = "<group>"; };
+		D9C640B91A24B50F00C7E997 /* BBLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBLabel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9C640791A24B4DC00C7E997 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C640821A24B4DC00C7E997 /* CoreGraphics.framework in Frameworks */,
+				D9C640841A24B4DC00C7E997 /* UIKit.framework in Frameworks */,
+				D9C640801A24B4DC00C7E997 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C6409D1A24B4DD00C7E997 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C640A21A24B4DD00C7E997 /* XCTest.framework in Frameworks */,
+				D9C640A41A24B4DD00C7E997 /* UIKit.framework in Frameworks */,
+				D9C640A31A24B4DD00C7E997 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9C640731A24B4DC00C7E997 = {
+			isa = PBXGroup;
+			children = (
+				D9C640B71A24B50F00C7E997 /* BBLabel */,
+				D9C640851A24B4DC00C7E997 /* BBLabelDemo */,
+				D9C640A71A24B4DD00C7E997 /* BBLabelDemoTests */,
+				D9C6407E1A24B4DC00C7E997 /* Frameworks */,
+				D9C6407D1A24B4DC00C7E997 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D9C6407D1A24B4DC00C7E997 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9C6407C1A24B4DC00C7E997 /* BBLabelDemo.app */,
+				D9C640A01A24B4DD00C7E997 /* BBLabelDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9C6407E1A24B4DC00C7E997 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9C6407F1A24B4DC00C7E997 /* Foundation.framework */,
+				D9C640811A24B4DC00C7E997 /* CoreGraphics.framework */,
+				D9C640831A24B4DC00C7E997 /* UIKit.framework */,
+				D9C640A11A24B4DD00C7E997 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D9C640851A24B4DC00C7E997 /* BBLabelDemo */ = {
+			isa = PBXGroup;
+			children = (
+				D9C6408E1A24B4DC00C7E997 /* AppDelegate.h */,
+				D9C6408F1A24B4DC00C7E997 /* AppDelegate.m */,
+				D9C640911A24B4DC00C7E997 /* Main_iPhone.storyboard */,
+				D9C640941A24B4DC00C7E997 /* Main_iPad.storyboard */,
+				D9C640971A24B4DD00C7E997 /* ViewController.h */,
+				D9C640981A24B4DD00C7E997 /* ViewController.m */,
+				D9C6409A1A24B4DD00C7E997 /* Images.xcassets */,
+				D9C640861A24B4DC00C7E997 /* Supporting Files */,
+			);
+			path = BBLabelDemo;
+			sourceTree = "<group>";
+		};
+		D9C640861A24B4DC00C7E997 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9C640871A24B4DC00C7E997 /* BBLabelDemo-Info.plist */,
+				D9C640881A24B4DC00C7E997 /* InfoPlist.strings */,
+				D9C6408B1A24B4DC00C7E997 /* main.m */,
+				D9C6408D1A24B4DC00C7E997 /* BBLabelDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9C640A71A24B4DD00C7E997 /* BBLabelDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9C640AD1A24B4DD00C7E997 /* BBLabelDemoTests.m */,
+				D9C640A81A24B4DD00C7E997 /* Supporting Files */,
+			);
+			path = BBLabelDemoTests;
+			sourceTree = "<group>";
+		};
+		D9C640A81A24B4DD00C7E997 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D9C640A91A24B4DD00C7E997 /* BBLabelDemoTests-Info.plist */,
+				D9C640AA1A24B4DD00C7E997 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9C640B71A24B50F00C7E997 /* BBLabel */ = {
+			isa = PBXGroup;
+			children = (
+				D9C640B81A24B50F00C7E997 /* BBLabel.h */,
+				D9C640B91A24B50F00C7E997 /* BBLabel.m */,
+			);
+			path = BBLabel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9C6407B1A24B4DC00C7E997 /* BBLabelDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9C640B11A24B4DD00C7E997 /* Build configuration list for PBXNativeTarget "BBLabelDemo" */;
+			buildPhases = (
+				D9C640781A24B4DC00C7E997 /* Sources */,
+				D9C640791A24B4DC00C7E997 /* Frameworks */,
+				D9C6407A1A24B4DC00C7E997 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBLabelDemo;
+			productName = BBLabelDemo;
+			productReference = D9C6407C1A24B4DC00C7E997 /* BBLabelDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D9C6409F1A24B4DD00C7E997 /* BBLabelDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9C640B41A24B4DD00C7E997 /* Build configuration list for PBXNativeTarget "BBLabelDemoTests" */;
+			buildPhases = (
+				D9C6409C1A24B4DD00C7E997 /* Sources */,
+				D9C6409D1A24B4DD00C7E997 /* Frameworks */,
+				D9C6409E1A24B4DD00C7E997 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9C640A61A24B4DD00C7E997 /* PBXTargetDependency */,
+			);
+			name = BBLabelDemoTests;
+			productName = BBLabelDemoTests;
+			productReference = D9C640A01A24B4DD00C7E997 /* BBLabelDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9C640741A24B4DC00C7E997 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = taobao;
+				TargetAttributes = {
+					D9C6409F1A24B4DD00C7E997 = {
+						TestTargetID = D9C6407B1A24B4DC00C7E997;
+					};
+				};
+			};
+			buildConfigurationList = D9C640771A24B4DC00C7E997 /* Build configuration list for PBXProject "BBLabelDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9C640731A24B4DC00C7E997;
+			productRefGroup = D9C6407D1A24B4DC00C7E997 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9C6407B1A24B4DC00C7E997 /* BBLabelDemo */,
+				D9C6409F1A24B4DD00C7E997 /* BBLabelDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9C6407A1A24B4DC00C7E997 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C640961A24B4DC00C7E997 /* Main_iPad.storyboard in Resources */,
+				D9C6409B1A24B4DD00C7E997 /* Images.xcassets in Resources */,
+				D9C640931A24B4DC00C7E997 /* Main_iPhone.storyboard in Resources */,
+				D9C6408A1A24B4DC00C7E997 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C6409E1A24B4DD00C7E997 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C640AC1A24B4DD00C7E997 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9C640781A24B4DC00C7E997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C640BA1A24B50F00C7E997 /* BBLabel.m in Sources */,
+				D9C640991A24B4DD00C7E997 /* ViewController.m in Sources */,
+				D9C640901A24B4DC00C7E997 /* AppDelegate.m in Sources */,
+				D9C6408C1A24B4DC00C7E997 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9C6409C1A24B4DD00C7E997 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9C640AE1A24B4DD00C7E997 /* BBLabelDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9C640A61A24B4DD00C7E997 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9C6407B1A24B4DC00C7E997 /* BBLabelDemo */;
+			targetProxy = D9C640A51A24B4DD00C7E997 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D9C640881A24B4DC00C7E997 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9C640891A24B4DC00C7E997 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D9C640911A24B4DC00C7E997 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9C640921A24B4DC00C7E997 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		D9C640941A24B4DC00C7E997 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9C640951A24B4DC00C7E997 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		D9C640AA1A24B4DD00C7E997 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9C640AB1A24B4DD00C7E997 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D9C640AF1A24B4DD00C7E997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9C640B01A24B4DD00C7E997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9C640B21A24B4DD00C7E997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBLabelDemo/BBLabelDemo-Prefix.pch";
+				INFOPLIST_FILE = "BBLabelDemo/BBLabelDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D9C640B31A24B4DD00C7E997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBLabelDemo/BBLabelDemo-Prefix.pch";
+				INFOPLIST_FILE = "BBLabelDemo/BBLabelDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D9C640B51A24B4DD00C7E997 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BBLabelDemo.app/BBLabelDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBLabelDemo/BBLabelDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BBLabelDemoTests/BBLabelDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D9C640B61A24B4DD00C7E997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BBLabelDemo.app/BBLabelDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BBLabelDemo/BBLabelDemo-Prefix.pch";
+				INFOPLIST_FILE = "BBLabelDemoTests/BBLabelDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9C640771A24B4DC00C7E997 /* Build configuration list for PBXProject "BBLabelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9C640AF1A24B4DD00C7E997 /* Debug */,
+				D9C640B01A24B4DD00C7E997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9C640B11A24B4DD00C7E997 /* Build configuration list for PBXNativeTarget "BBLabelDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9C640B21A24B4DD00C7E997 /* Debug */,
+				D9C640B31A24B4DD00C7E997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9C640B41A24B4DD00C7E997 /* Build configuration list for PBXNativeTarget "BBLabelDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9C640B51A24B4DD00C7E997 /* Debug */,
+				D9C640B61A24B4DD00C7E997 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9C640741A24B4DC00C7E997 /* Project object */;
+}
