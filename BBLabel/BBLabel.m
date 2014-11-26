@@ -25,6 +25,7 @@
     if (self)
     {
         self.linesSpace = 4.0f;
+        self.numberOfLines = 0;
     }
     return self;
 }
@@ -121,44 +122,69 @@
     
 
     CFArrayRef lines = CTFrameGetLines(frame);
-    long lineNumber = self.currLinesNum;
-    CGPoint lineOrigins[lineNumber];
-    CTFrameGetLineOrigins(frame,CFRangeMake(0,lineNumber), lineOrigins);
+    long maxlinesAtTheFrame = (long)CFArrayGetCount(lines);
     
-    for(int lineIndex = 0;lineIndex < lineNumber;lineIndex++)
+    if (self.allLinesNum == 0)
+    {
+        CTFramesetterRef textFramesetter = CTFramesetterCreateWithAttributedString((CFAttributedStringRef)self.attributedString);
+        CGRect drawingRect = CGRectMake(0, 0, self.bounds.size.width, 100000);  //这里的高要设置足够大
+        CGMutablePathRef textpath = CGPathCreateMutable();
+        CGPathAddRect(textpath, NULL, drawingRect);
+        CTFrameRef textFrame = CTFramesetterCreateFrame(textFramesetter,CFRangeMake(0,0), textpath, NULL);
+        CFArrayRef textlines = CTFrameGetLines(textFrame);
+        self.allLinesNum = (long)CFArrayGetCount(textlines);
+    }
+    
+    
+    if (self.currLinesNum == 0)
+    {
+        self.currLinesNum = self.numberOfLines == 0 ? maxlinesAtTheFrame : MIN(maxlinesAtTheFrame, self.numberOfLines);
+    }
+   
+    CGPoint lineOrigins[self.currLinesNum];
+    CTFrameGetLineOrigins(frame,CFRangeMake(0,self.currLinesNum), lineOrigins);
+    
+    for(int lineIndex = 0;lineIndex < self.currLinesNum;lineIndex++)
     {
         CGPoint lineOrigin = lineOrigins[lineIndex];
         CTLineRef line = CFArrayGetValueAtIndex(lines,lineIndex);
         CTLineRef lastLine = NULL;
-        if (lineNumber != self.allLinesNum)
+        if (self.currLinesNum != self.allLinesNum)
         {
-            if (lineIndex == lineNumber - 1)
+            if (lineIndex == self.currLinesNum - 1)
             {
-                CTLineTruncationType ltt = kCTLineTruncationEnd;
-                CGSize size = CGSizeMake(100,100);
-                CGSize lablesize;
+                
+                CFRange range  = CTLineGetStringRange(line);
+                NSRange ocrange = NSMakeRange(range.location, range.length);
+                NSString *substr = [self.text substringWithRange:ocrange];
+                substr = [substr stringByAppendingString:@"\u2026"];
+                
+                CGSize size = CGSizeMake(10000,10000);
+                CGSize labelsize;
                 if ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
                 {
                     NSDictionary *attributes = @{NSFontAttributeName:self.font};
-                    lablesize = [@"\u2026" boundingRectWithSize:size
+                    labelsize = [substr boundingRectWithSize:size
                                                         options:NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading
-                                                    attributes:attributes
+                                                     attributes:attributes
                                                         context:nil].size;
                 }
                 else
                 {
-                    lablesize = [@"\u2026" sizeWithFont:self.font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
+                    labelsize = [substr sizeWithFont:self.font constrainedToSize:size lineBreakMode:NSLineBreakByWordWrapping];
                 }
-                line = CTLineCreateTruncatedLine(line, self.bounds.size.width - lablesize.width, ltt, NULL);
-                CFRange range  = CTLineGetStringRange(line);
-                CFRelease(line);
-                NSRange ocrange = NSMakeRange(range.location, range.length);
-                NSString *substr = [self.text substringWithRange:ocrange];
-                substr = [substr stringByAppendingString:@"\u2026"];
-                if (!self.replaceString)
+                
+                
+                if (labelsize.width > self.bounds.size.width)
                 {
-                    self.replaceString = [self attributedStringAddStyle:substr];
+                    ocrange = NSMakeRange(range.location, range.length - 1);
+                    substr = [self.text substringWithRange:ocrange];
+                    substr = [substr stringByAppendingString:@"\u2026"];
                 }
+                
+
+                self.replaceString = [self attributedStringAddStyle:substr];
+
                 lastLine = CTLineCreateWithAttributedString((__bridge CFAttributedStringRef)self.replaceString);
             }
         }
