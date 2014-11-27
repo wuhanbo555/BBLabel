@@ -55,6 +55,7 @@
     contentLab.linesSpace = 20;
     contentLab.textColor = [UIColor whiteColor];
     contentLab.backgroundColor = [UIColor grayColor];
+    //用于精准计算。
     contentLab.frame = CGRectMake(20, 60, 280, [contentLab wordsDrawInViewHeightWithWidth:280.0f]);
     [self.view addSubview:contentLab];
 }

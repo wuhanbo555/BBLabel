@@ -26,6 +26,7 @@
     {
         self.linesSpace = 4.0f;
         self.numberOfLines = 0;
+        self.bbtextAlignment = bTextAlignmentLeft;
     }
     return self;
 }
@@ -57,15 +58,16 @@
     [attString addAttribute:(id)kCTForegroundColorAttributeName value:(id)(self.textColor.CGColor) range:NSMakeRange(0,[attString length])];
     
     //创建文本对齐方式
-    CTTextAlignment alignment = kCTLeftTextAlignment;
+
     if(self.textAlignment == NSTextAlignmentCenter)
     {
-        alignment = kCTCenterTextAlignment;
+        self.bbtextAlignment  = bTextAlignmentCenter;
     }
     if(self.textAlignment == NSTextAlignmentRight)
     {
-        alignment = kCTRightTextAlignment;
+        self.bbtextAlignment = bTextAlignmentRight;
     }
+    CTTextAlignment alignment = (CTTextAlignment)self.bbtextAlignment;
     CTParagraphStyleSetting alignmentStyle;
     alignmentStyle.spec = kCTParagraphStyleSpecifierAlignment;
     alignmentStyle.valueSize = sizeof(CTTextAlignment);
@@ -135,11 +137,8 @@
         self.allLinesNum = (long)CFArrayGetCount(textlines);
     }
     
-    
-    if (self.currLinesNum == 0)
-    {
-        self.currLinesNum = self.numberOfLines == 0 ? maxlinesAtTheFrame : MIN(maxlinesAtTheFrame, self.numberOfLines);
-    }
+    long maxLines = MIN(self.allLinesNum, maxlinesAtTheFrame);
+    self.currLinesNum = self.numberOfLines == 0 ? maxLines : MIN(maxLines, self.numberOfLines);
    
     CGPoint lineOrigins[self.currLinesNum];
     CTFrameGetLineOrigins(frame,CFRangeMake(0,self.currLinesNum), lineOrigins);
