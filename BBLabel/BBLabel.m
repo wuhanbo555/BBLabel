@@ -149,7 +149,7 @@
     {
         CTLineRef line = CFArrayGetValueAtIndex(lines,lineIndex);
         CGPoint lineOrigin;
-        if (maxlinesAtTheFrame >= self.currLinesNum && self.bbtextVerticalAlignment != kBBTextVerticalAlignmentTop)
+        if (maxlinesAtTheFrame > self.currLinesNum && self.bbtextVerticalAlignment != kBBTextVerticalAlignmentTop)
         {
             
             if (self.bbtextVerticalAlignment == kBBTextVerticalAlignmentMiddle)
