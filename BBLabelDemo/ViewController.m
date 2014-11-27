@@ -48,15 +48,14 @@
 - (void) loadSHLLabel
 {
     
-    contentLab = [[BBLabel alloc] init];
-    contentLab.text = @"腾讯首款3D轻动作跑酷手游《天天风之旅》至今已发布炎、白雪、忍者、狐妖、游戏宅与青蛙王子六大角色。唯美的造型与独特的技能让他们人气十足";;
+    contentLab = [[BBLabel alloc] initWithFrame:CGRectMake(20, 60, 280, 200)];
+    contentLab.bbtextVerticalAlignment = kBBTextVerticalAlignmentMiddle;
+    contentLab.text = @"腾讯首款3D轻动作跑酷手游《天天风之旅》至今已发布炎、白雪、忍者、狐妖、游戏宅与青蛙王子六大角色。唯美的造型与独特的技能让他们人气十足";
     contentLab.font = [UIFont systemFontOfSize:16];
     contentLab.numberOfLines = 2;
     contentLab.linesSpace = 20;
     contentLab.textColor = [UIColor whiteColor];
     contentLab.backgroundColor = [UIColor grayColor];
-    //用于精准计算。
-    contentLab.frame = CGRectMake(20, 60, 280, [contentLab wordsDrawInViewHeightWithWidth:280.0f]);
     [self.view addSubview:contentLab];
 }
 

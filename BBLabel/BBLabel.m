@@ -26,7 +26,8 @@
     {
         self.linesSpace = 4.0f;
         self.numberOfLines = 0;
-        self.bbtextAlignment = bTextAlignmentLeft;
+        self.bbtextAlignment = kBBTextAlignmentLeft;
+        self.bbtextVerticalAlignment = kBBTextVerticalAlignmentTop;
     }
     return self;
 }
@@ -61,11 +62,11 @@
 
     if(self.textAlignment == NSTextAlignmentCenter)
     {
-        self.bbtextAlignment  = bTextAlignmentCenter;
+        self.bbtextAlignment  = kBBTextAlignmentCenter;
     }
     if(self.textAlignment == NSTextAlignmentRight)
     {
-        self.bbtextAlignment = bTextAlignmentRight;
+        self.bbtextAlignment = kBBTextAlignmentRight;
     }
     CTTextAlignment alignment = (CTTextAlignment)self.bbtextAlignment;
     CTParagraphStyleSetting alignmentStyle;
@@ -124,6 +125,7 @@
     
 
     CFArrayRef lines = CTFrameGetLines(frame);
+    //该区域内能显示的最大行数
     long maxlinesAtTheFrame = (long)CFArrayGetCount(lines);
     
     if (self.allLinesNum == 0)
@@ -145,8 +147,32 @@
     
     for(int lineIndex = 0;lineIndex < self.currLinesNum;lineIndex++)
     {
-        CGPoint lineOrigin = lineOrigins[lineIndex];
         CTLineRef line = CFArrayGetValueAtIndex(lines,lineIndex);
+        CGPoint lineOrigin;
+        if (maxlinesAtTheFrame >= self.currLinesNum && self.bbtextVerticalAlignment != kBBTextVerticalAlignmentTop)
+        {
+            
+            if (self.bbtextVerticalAlignment == kBBTextVerticalAlignmentMiddle)
+            {
+                float topMargin = lineOrigins[self.currLinesNum - 1].y / 2;
+                lineOrigin = lineOrigins[lineIndex];
+                lineOrigin = CGPointMake(lineOrigin.x,lineOrigin.y - ceilf(topMargin));
+            }
+            else if(self.bbtextVerticalAlignment == kBBTextVerticalAlignmentBottom)
+            {
+                CGFloat ascent;
+                CGFloat descent;
+                CGFloat leading;
+                CTLineGetTypographicBounds(line, &ascent, &descent, &leading);
+                lineOrigin = lineOrigins[self.currLinesNum - 1 - lineIndex];
+                lineOrigin = CGPointMake(lineOrigin.x, (self.bounds.size.height - floorf(lineOrigin.y + ascent - descent)));
+            }
+        }
+        else
+        {
+            lineOrigin = lineOrigins[lineIndex];
+        }
+        
         CTLineRef lastLine = NULL;
         if (self.currLinesNum != self.allLinesNum)
         {
@@ -247,7 +273,7 @@
     CTLineRef line = CFArrayGetValueAtIndex(lines,self.currLinesNum - 1);
     CTLineGetTypographicBounds(line, &ascent, &descent, &leading);
     
-    total_height = 100000 - line_y + (int) descent +1;//+1为了纠正descent转换成int小数点后舍去的值
+    total_height = 100000 - line_y + ceilf(descent);
     
     CFRelease(textFrame);
     CFRelease(framesetter);

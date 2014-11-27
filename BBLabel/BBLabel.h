@@ -12,18 +12,26 @@
 
 typedef NS_ENUM(NSInteger, BBTextAlignment)
 {
-    bTextAlignmentLeft = 0,
-    bTextAlignmentRight = 1,
-    bTextAlignmentCenter = 2,
-    bTextAlignmentJustified = 3,
-    bTextAlignmentNatural = 4,
+    kBBTextAlignmentLeft = 0,
+    kBBTextAlignmentRight = 1,
+    kBBTextAlignmentCenter = 2,
+    kBBTextAlignmentJustified = 3,
+    kBBTextAlignmentNatural = 4,
 };
+
+typedef NS_ENUM(NSInteger, BBTextVerticalAlignment)
+{
+    kBBTextVerticalAlignmentTop = 0, // default
+    kBBTextVerticalAlignmentMiddle,
+    kBBTextVerticalAlignmentBottom,
+};
+
 
 
 //行间距，默认为4.0f
 @property(nonatomic,assign)CGFloat linesSpace;
 @property(nonatomic,assign)BBTextAlignment bbtextAlignment;
-
+@property(nonatomic,assign)BBTextVerticalAlignment bbtextVerticalAlignment;
 //绘制前先获取label高度，避免重复计算
 - (float)wordsDrawInViewHeightWithWidth:(float)width;
 
